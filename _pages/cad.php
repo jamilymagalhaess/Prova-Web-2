@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="perfume-box">
-        <form action="">
+        <form action="../_crudes/process_cadastro.php" method="post">
             <fieldset class="perfume-fieldset">
                 <legend class="perfume-legend"><b>Fórmulário de Perfumes</b></legend>
                 <br>
@@ -21,8 +21,23 @@
                 </div>
                 <br><br>
                 <div class="input-container">
-                    <input type="text" name="fragrancia" id="fragrancia" class="input-text" required>
-                    <label for="fragrancia" class="input-label">Fragrância</label>
+                <select name="IdCategoria" class="input-text" required>
+                <option value="0">- selecione -</option>
+				<?php
+				
+					require_once("../_crudes/conexao.php");
+					
+					$sql_categoria = "SELECT * FROM categoriaperfume";
+					
+					$result = mysqli_query($conexao,$sql_categoria);
+					
+					while ($categoriaperfume = mysqli_fetch_assoc($result)) {
+						?>
+						<option value="<?php echo $categoriaperfume['IdCategoriaPerfume'] ?>"><?php echo $categoriaperfume['categoriaPerfumeNome'] ?></option>
+						<?php
+					}
+				?>
+                </select>
                 </div>
                 <br><br>
                 <div class="input-container">
@@ -31,40 +46,41 @@
                 </div>
                 <br><br>
                 <div class="input-container">
-                    <select id="genero" class="input-text" required>
+                    <select name="genero" class="input-text" required>
                         <option selected disabled value="">Gênero</option>
-                        <option>Masculino</option>
-                        <option>Feminino</option>
-                        <option>Unissex</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                        <option value="U">Unissex</option>
                     </select>
                 </div>
                 <br><br>
                 <div class="input-container">
-                    <select id="preco" class="input-text" required>
+                    <select name="precinho" class="input-text" required>
                         <option selected disabled value="">Preço</option>
-                        <option>R$50</option>
-                        <option>R$100</option>
-                        <option>R$200</option>
+                        <option value="50">R$50</option>
+                        <option value="100">R$100</option>
+                        <option value="200">R$200</option>
                     </select>
                 </div>
+
                 <br><br>
                 <div class="input-container">
                     <label><strong>Selecione o volume:</strong></label>
                     <br>
                     <label>
-                        <input type="radio" name="volume" value="50ml" checked> 50ml
+                        <input type="radio" name="volume" value="50.0" checked> 50ml
                     </label>
                     <label>
-                        <input type="radio" name="volume" value="100ml"> 100ml
+                        <input type="radio" name="volume" value="100.0"> 100ml
                     </label>
                     <label>
-                        <input type="radio" name="volume" value="200ml"> 200ml
+                        <input type="radio" name="volume" value="200.0"> 200ml
                     </label>
                 </div>
                 <br>
                 <div class="input-container">
                     <label for="composicao" ><strong>Composição:</strong></label>
-                    <textarea rows="6" style="width: 28em" id="composicao" name="composicao" class="input-text-2"></textarea>
+                    <textarea rows="6" style="width: 28em; color:blue;" id="composicao" name="composicao" class="input-text-2"></textarea>
                 </div>
                 <br><br>
                 <input type="submit" name="submit" id="submit" class="submit-button">

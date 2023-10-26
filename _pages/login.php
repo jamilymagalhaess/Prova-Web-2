@@ -8,7 +8,7 @@
 <body>
     <div class="login">
         <h2>Login</h2>
-        <form action="process_login.php" method="post">
+        <form action="../_crudes/process_login.php" method="post">
             
             <fieldset class="grupo">
                 <div class="campo">
