@@ -1,0 +1,162 @@
+<!--Jamily Magalhães da Silva
+    RGA: 202111316016 -->
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" type="text/css" href="estilo.css" media="screen">
+
+        <title>Formulário</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=g3k9Ucc108qcedRk2sJk2q2H9DNFZTk0jNsDuqJG_GCQ2RelRnTHkRxgEir8lineHx2SglQJmy4nQ497iunjEClAfUOZpyEuObAl9Jnx7jpe6oFKx7ugkUU7yhOtWfnK23ygiPhu2o0dEXHDhEbxUoJwCyVu8K11VsIXfMqNgElN5AhYynh27e1FAgVCZ4XWQBKIhgUdFpkQs7VE5Ndk0g" charset="UTF-8"></script></head>
+
+    <body>  
+
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div>
+            <h1 id="titulo">PROMOÇÃO DIA DOS PAIS</h1>
+            <p id="subtitulo">Complete as informações para concorrer ao prêmio</p>
+            <br>
+        </div>
+
+        <!-- Início do formulário -->
+        <form>
+
+            <fieldset class="grupo">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="nome"><strong>Nome</strong></label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+
+                <!-- Campo do telefone com legenda "telefone" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="telefone"><strong>Telefone</strong></label>
+                    <input type="tel" name="telefone" id="telefone" required>
+                </div>
+            </fieldset> 
+
+            <!-- Campo de email com-->
+            <div class="campo">
+                <label for="email"><strong>Email</strong></label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <!-- Campo com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+            <div class="campo">
+                <label><strong>Selecione o presente:</strong></label>
+                <label>
+                    <input type="radio" name="presente" value="ingresso" checked> Dois ingressos para assistir o Dourado
+                </label>
+                <label>
+                    <input type="radio" name="presente" value="relogio"> Um relógio
+                </label>
+                <label>
+                    <input type="radio" name="presente" value="jantar"> Um jantar memorável
+                </label>
+            </div>
+
+            <!-- Campo para escolha da cidade (select option) e css de classe "campo" -->
+            <div class="campo">
+                <label for="cidade"><strong>Cidade</strong></label>
+                <select id="cidade" required>
+                  <option selected disabled value="">Selecione</option>
+                  <option>Cuiabá</option>
+                  <option>Várzea Grande</option>
+                  <option>Santo Antônio</option>
+                </select>
+            </div>
+
+            <!-- Campo para marcar (checkbox) e css de classe "campo" -->
+            <fieldset class="grupo">
+                <div id="check">
+                    <label><strong>Receber notificação de novas promoções:</strong></label><br><br>
+                    <input type="checkbox" id="SMS" name="SMS" value="HTML">
+                    <label for="SMS"> SMS</label><br>
+                    <input type="checkbox" id="E-MAIL" name="E-MAIL" value="CSS">
+                    <label for="E-MAIL"> E-MAIL</label>   
+                </div>
+            </fieldset>
+
+            <!-- Caixa de texto -->
+            <div class="campo">
+                <br>
+                <label for="mensagem"><strong>Por que o seu pai deve ganhar este presente: </strong></label>
+                <textarea rows="6" style="width: 26em" id="mensagem" name="mensagem"></textarea>
+            </div>
+
+            <!-- Botão para enviar o formulário -->
+            <button class="botao" type="submit" onsubmit="">Enviar</button>            
+        </form>
+
+        <table class="tabela-dados">
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Presente</th>
+                <th>Cidade</th>
+                <th>Notificações</th>
+                <th>Justificativa</th>
+            </tr>
+            <!-- Linha 1: Dados fictícios -->
+            <tr>
+                <td>João Silva</td>
+                <td>555-1234</td>
+                <td>joao@example.com</td>
+                <td>ingresso</td>
+                <td>Cuiabá</td>
+                <td>SMS, E-MAIL</td>
+                <td>Porque ele é um grande fã do time</td>
+            </tr>
+            <!-- Linha 2: Dados fictícios -->
+            <tr>
+                <td>Maria Souza</td>
+                <td>555-5678</td>
+                <td>maria@example.com</td>
+                <td>relogio</td>
+                <td>Várzea Grande</td>
+                <td>E-MAIL</td>
+                <td>Porque ela merece um presente especial</td>
+            </tr>
+            <!-- Linha 3: Dados fictícios -->
+            <tr>
+                <td>Carlos Santos</td>
+                <td>555-9876</td>
+                <td>carlos@example.com</td>
+                <td>jantar</td>
+                <td>Santo Antônio</td>
+                <td>SMS</td>
+                <td>Porque ele é um excelente pai</td>
+            </tr>
+            <!-- Linha 4: Dados fictícios -->
+            <tr>
+                <td>Ana Ferreira</td>
+                <td>555-4321</td>
+                <td>ana@example.com</td>
+                <td>ingresso</td>
+                <td>Cuiabá</td>
+                <td>SMS, E-MAIL</td>
+                <td>Porque ela sempre cuidou da família</td>
+            </tr>
+            <!-- Linha 5: Dados fictícios -->
+            <tr>
+                <td>Pedro Oliveira</td>
+                <td>555-8765</td>
+                <td>pedro@example.com</td>
+                <td>relogio</td>
+                <td>Várzea Grande</td>
+                <td>E-MAIL</td>
+                <td>Porque ele é um exemplo de pai</td>
+            </tr>
+        </table><br><br>
+
+
+    </body>
+</html>
+
+
+
+
