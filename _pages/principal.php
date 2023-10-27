@@ -22,7 +22,9 @@
             <th>notas Olfativas</th>
             <th>genero</th>
             <th>Composicao</th>
-            <?php if (isset($_SESSION ['autenticado']) && $_SESSION ['autenticado']){?>
+            <?php 
+            session_start();
+            if (isset($_SESSION ['autenticado']) && $_SESSION ['autenticado']){?>
                 <th></th>
                 <th></th>
                 <th></th>
@@ -32,7 +34,7 @@
         <tbody>
         
         <?php
-                    session_start();
+                    
 					require_once("../_crudes/conexao.php");
 					
 					$sql_menu = "SELECT * FROM perfume";
@@ -52,7 +54,7 @@
                             
                             <?php if (isset($_SESSION ['autenticado']) && $_SESSION ['autenticado']){?>
                             <td><a method="POST" href="visualizar.php?id=<?php echo $perfume['IdPerfume']?>"><button>visualizar</button></a></td>
-                            <td><a href="editar.php?id=<?php echo $perfume['IdPerfume']?>"><button>Editar</button></a></td>
+                            <td><a method="POST" href="editar.php?id=<?php echo $perfume['IdPerfume']?>"><button>Editar</button></a></td>
                             <td><a href="../_crudes/process_excluir.php?id=<?php echo $perfume['IdPerfume']?>"><button>Excluir</button></a></td>
                             <?php }?>
 						<tr>
