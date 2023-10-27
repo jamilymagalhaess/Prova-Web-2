@@ -35,7 +35,8 @@ CREATE TABLE Perfume (
     marca VARCHAR(255) NOT NULL,
     volume DECIMAL(10, 2) NOT NULL,
     preco DECIMAL(10, 2) NOT NULL,
-    anoLancamento INT,
+    Composicao text,
+    genero char(1),
     PRIMARY KEY(IdPerfume),
     FOREIGN KEY(IdCategoriaPerfume) REFERENCES CategoriaPerfume(IdCategoriaPerfume)
 );

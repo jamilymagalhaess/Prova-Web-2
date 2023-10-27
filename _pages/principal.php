@@ -22,9 +22,11 @@
             <th>notas Olfativas</th>
             <th>genero</th>
             <th>Composicao</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <?php if (isset($_SESSION ['autenticado']) && $_SESSION ['autenticado']){?>
+                <th></th>
+                <th></th>
+                <th></th>
+            <?php }?>
         </tr>
 
         <tbody>
