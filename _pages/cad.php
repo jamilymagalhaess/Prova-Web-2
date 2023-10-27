@@ -22,7 +22,7 @@
                 <br><br>
                 <div class="input-container">
                 <select name="IdCategoria" class="input-text" required>
-                <option value="0">- selecione -</option>
+                <option value="0">Categoria</option>
 				<?php
 				
 					require_once("../_crudes/conexao.php");

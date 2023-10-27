@@ -16,18 +16,13 @@ INSERT INTO Usuario (nomeUsuario, loginUsuario, senhaUsuario) VALUES
 CREATE TABLE CategoriaPerfume (
     IdCategoriaPerfume INT AUTO_INCREMENT,
     categoriaPerfumeNome VARCHAR(200) NOT NULL,
-    categoriaPerfumeDescricao VARCHAR(1000),
     PRIMARY KEY(IdCategoriaPerfume)
 );
 
 
-INSERT INTO CategoriaPerfume (IdCategoriaPerfume, categoriaPerfumeNome) VALUES
-('Floral', 'Fragrâncias florais suaves e agradáveis.'),
-('Cítrico', 'Fragrâncias cítricas refrescantes.'),
-('Amadeirado', 'Fragrâncias amadeiradas e sofisticadas.'),
-('Oriental', 'Fragrâncias orientais sensuais e exóticas.'),
-('Verde', 'Fragrâncias frescas e herbais.'),
-('Aquático', 'Fragrâncias aquáticas, leves e limpas.');
+INSERT INTO CategoriaPerfume (categoriaPerfumeNome) VALUES
+('Floral'),('Cítrico'),('Amadeirado'),('Oriental'),('Verde'),
+('Aquático');
 
 
 CREATE TABLE Perfume (

@@ -3,6 +3,7 @@
 
 <head>
     <title>Tela Principal</title>
+    <link rel="stylesheet" type="text/css" href="../_estilos/estilosPrinc.css">
 
 </head>
 
@@ -12,15 +13,16 @@
 
 
 <div class="input-container">
-    <table> 
+    <table class="tabela-dados"> 
         <tr> 
             <th>Nome</th>
             <th>Marca</th> 
             <th>volume</th>
             <th>preco</th>
-            <th>notasOlfativas</th>
+            <th>notas Olfativas</th>
             <th>genero</th>
             <th>Composicao</th>
+            <th></th>
             <th></th>
             <th></th>
         </tr>
