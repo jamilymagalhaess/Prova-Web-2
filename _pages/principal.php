@@ -9,28 +9,49 @@
 <body>
 <div class="input-container">
     <table> 
-        <thead> parte de cima</thead>
+        <tr> 
+            <th>Nome</th>
+            <th>Marca</th> 
+            <th>volume</th>
+            <th>preco</th>
+            <th>notasOlfativas</th>
+            <th>genero</th>
+            <th>Composicao</th>
+            <th></th>
+            <th></th>
+        </tr>
 
         <tbody>
-
+        
         <?php
+                    session_start();
 					require_once("../_crudes/conexao.php");
 					
-					$sql_categoria = "SELECT * FROM categoriaperfume";
+					$sql_menu = "SELECT * FROM perfume";
 					
-					$result = mysqli_query($conexao,$sql_categoria);
+					$result = mysqli_query($conexao,$sql_menu);
 					
-					while ($categoriaperfume = mysqli_fetch_assoc($result)) {
+					while ($perfume = mysqli_fetch_assoc($result)) {
 						?>
-						<option value="<?php echo $categoriaperfume['IdCategoriaPerfume'] ?>"><?php echo $categoriaperfume['categoriaPerfumeNome'] ?></option>
-						<?php
+                        <tr>
+						    <td><?php echo $perfume['nomePerfume'] ?></td>
+                            <td><?php echo $perfume['marca'] ?></td>
+                            <td><?php echo $perfume['volume'] ?></td>
+                            <td><?php echo $perfume['preco'] ?></td>
+                            <td><?php echo $perfume['notasOlfativas'] ?></td>
+                            <td><?php echo $perfume['genero'] ?></td>
+                            <td><?php echo $perfume['Composicao'] ?></td>
+                            
+                            <?php if (isset($_SESSION ['autenticado']) && $_SESSION ['autenticado']){?>
+                            <td><a href="visualizar.php?id=<?php echo $perfume['IdPerfume']?>"><button>visualizar</button></a></td>
+                            <td><a href="editar.php?id=<?php echo $perfume['IdPerfume']?>"><button>Editar</button></a></td>
+                            <td><a href="../_crudes/process_excluir.php?id=<?php echo $perfume['IdPerfume']?>"><button>Excluir</button></a></td>
+                            <?php }?>
+						<tr>
+                        <?php
 					}
 				?>
-                </select>
-            </div>
-
         </tbody>
-
     </table>
                 
 </div>
