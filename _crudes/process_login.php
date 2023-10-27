@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($result->num_rows > 0) {
             // As credenciais estão corretas, o usuário está autenticado
             $_SESSION['autenticado'] = true;
-            header("Location: ../_pages/cad.php"); // Redireciona para a página de dashboard
+            header("Location: ../_pages/principal.php"); // Redireciona para a página de dashboard
             exit();
         } else {
             $erro = "Usuário ou senha incorretos.";
