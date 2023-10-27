@@ -9,8 +9,8 @@
     <div class="sucesso">
         <fieldset >
             <div >    
-                <h2>cadastro realizado com sucesso!!!</h2>
-            <a href="../_pages/cad.php"><button class="botao"> Voltar</button></a>
+                <h2>sucesso!!!</h2>
+            <a href="../_pages/principal.php"><button class="botao"> Voltar</button></a>
             </div>
         </fieldset>   
     </div>

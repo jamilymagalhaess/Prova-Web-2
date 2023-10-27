@@ -7,6 +7,10 @@
 </head>
 
 <body>
+    
+    <?php include('cabecalho.php')?>
+
+
 <div class="input-container">
     <table> 
         <tr> 
@@ -43,7 +47,7 @@
                             <td><?php echo $perfume['Composicao'] ?></td>
                             
                             <?php if (isset($_SESSION ['autenticado']) && $_SESSION ['autenticado']){?>
-                            <td><a href="visualizar.php?id=<?php echo $perfume['IdPerfume']?>"><button>visualizar</button></a></td>
+                            <td><a method="POST" href="visualizar.php?id=<?php echo $perfume['IdPerfume']?>"><button>visualizar</button></a></td>
                             <td><a href="editar.php?id=<?php echo $perfume['IdPerfume']?>"><button>Editar</button></a></td>
                             <td><a href="../_crudes/process_excluir.php?id=<?php echo $perfume['IdPerfume']?>"><button>Excluir</button></a></td>
                             <?php }?>
